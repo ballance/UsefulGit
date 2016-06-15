@@ -1,12 +1,20 @@
 [user]
 	email = ballance@gmail.com
 	name = Chris Ballance
+[diff]
+  tool = bcomp
+[difftool]
+  prompt = false
+[difftool "bcomp"]
+  trustExitCode = true
+  cmd = "/usr/local/bin/bcomp" \"$LOCAL\" \"$REMOTE\"
 [merge]
-	tool = bcomp
+  tool = bcomp
 [mergetool]
-	tool = bcomp
-[merge.tool]
-	tool = bcomp
+  prompt = false
+[mergetool "bcomp"]
+  trustExitCode = true
+  cmd = "/usr/local/bin/bcomp" \"$LOCAL\" \"$REMOTE\" \"$BASE\" \"$MERGED\"
 [core]
 	editor = subl
 	whitespace = fix,-indent-with-non-tab,trailing-space,cr-at-eol
